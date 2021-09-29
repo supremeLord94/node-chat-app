@@ -71,6 +71,7 @@ socket.on('roomData', ({ room, users }) => {
         users
     })
     document.querySelector('#sidebar').innerHTML = html
+    autoscroll()
 })
 
 const resetForm = function () {
