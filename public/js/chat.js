@@ -63,6 +63,7 @@ socket.on('locationMessage', (obj) => {
         username: obj.username
     })
     $messages.insertAdjacentHTML('beforeend', html)
+    autoscroll()
 })
 
 socket.on('roomData', ({ room, users }) => {
@@ -71,7 +72,7 @@ socket.on('roomData', ({ room, users }) => {
         users
     })
     document.querySelector('#sidebar').innerHTML = html
-    autoscroll()
+
 })
 
 const resetForm = function () {
